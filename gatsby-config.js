@@ -28,12 +28,12 @@ try {
 } catch (e) {
     ghostConfig = {
         development: {
-            apiUrl: process.env.GHOST_API_URL,
-            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+            apiUrl: process.env.GATSBY_CMS_URL,
+            contentApiKey: process.env.GATSBY_CMS_API_KEY,
         },
         production: {
-            apiUrl: process.env.GHOST_API_URL,
-            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+            apiUrl: process.env.GATSBY_CMS_URL,
+            contentApiKey: process.env.GATSBY_CMS_API_KEY,
         },
     }
 } finally {
@@ -77,9 +77,9 @@ module.exports = {
                 overrideOS: false,
             },
         },
-        {
-            resolve: `gatsby-theme-ghost-members`,
-        },
+        // {
+        //     resolve: `gatsby-theme-ghost-members`,
+        // },
         {
             resolve: `gatsby-transformer-rehype`,
             options: {
@@ -93,6 +93,9 @@ module.exports = {
                     },
                     {
                         resolve: `gatsby-rehype-prismjs`,
+                    },
+                    {
+                        resolve: `gatsby-rehype-inline-images`,
                     },
                 ],
             },

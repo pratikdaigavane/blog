@@ -24,18 +24,18 @@
     "develop": "gatsby develop",
     "build": "gatsby build --log-pages",
     "clean": "gatsby clean",
-    "config": "git update-index --skip-worktree .ghost.json",
-    "deploy": "gatsby build && echo 'demo.jamify.org' > public/CNAME && gh-pages -f -d public -b master -r git@github.com:styxlab/styxlab.github.io"
+    "config": "git update-index --skip-worktree .ghost.json"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.3",
     "gatsby-plugin-ackee-tracker": "^1.4.0",
     "gatsby-plugin-netlify": "^2.3.11",
     "gatsby-plugin-preact": "^4.0.9",
     "gatsby-rehype-ghost-links": "^1.5.1",
+    "gatsby-rehype-inline-images": "^1.6.0",
     "gatsby-rehype-prismjs": "^1.1.2",
     "gatsby-theme-ghost-dark-mode": "^1.5.2",
-    "gatsby-theme-ghost-members": "^1.3.5",
     "gatsby-theme-try-ghost": "^1.43.1",
     "gatsby-transformer-rehype": "^1.8.0",
     "preact": "^10.4.6",
